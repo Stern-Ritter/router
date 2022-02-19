@@ -45,8 +45,9 @@ function Router() {
     }
   };
 
-  const handleAllListeners = async(type: string[]) =>
-    await Promise.all(listeners.map((listener) => handleListener(type, listener)));
+  const handleAllListeners = async(type: string[]) => {
+    Promise.all(listeners.map((listener) => handleListener(type, listener)));
+  };
 
   const addEventListeners = () => {
     window.addEventListener("popstate", () =>
