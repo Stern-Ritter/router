@@ -25,6 +25,6 @@ document.body.addEventListener("click", (e) => {
     const link = e.target as HTMLLinkElement;
     const url = link.getAttribute("href") || '/';
     router.go(url);
-    unsubscribe();
+    //unsubscribe();
   }
 });
