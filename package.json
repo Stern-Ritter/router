@@ -4,7 +4,7 @@
   "description": "Router",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest -i",
     "build": "webpack build --node-env production",
     "dev": "webpack serve --open",
     "lint": "eslint . --ext .js,.ts && tsc --noEmit",

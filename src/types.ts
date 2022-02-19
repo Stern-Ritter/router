@@ -8,14 +8,19 @@ type ListenerArgs = {
   state: Record<string, any>
 }
 
-type ListenerFunction = (args: ListenerArgs) => void;
+type ListenerFunction = (args: ListenerArgs) => Promise<void>;
 
 type ListenerType = {
   id: number;
   match: MatchType;
-  onEnter: ListenerFunction;
+  onEnter?: ListenerFunction;
   onBeforeEnter?: ListenerFunction;
   onLeave?: ListenerFunction;
 };
 
-export { MatchType, ListenerType, ListenerArgs, ListenerFunction };
+type RouterType = {
+  go: (url: string, state?: Record<string, any>) => void,
+  on: (args: Omit<ListenerType, "id">) => (() => void)
+}
+
+export { MatchType, ListenerType, ListenerArgs, ListenerFunction, RouterType};
