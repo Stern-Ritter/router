@@ -1,0 +1,61 @@
+{
+  "name": "router",
+  "version": "1.0.0",
+  "description": "Router",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i",
+    "build": "webpack build --node-env production",
+    "dev": "webpack serve --open",
+    "lint": "eslint . --ext .js,.ts && tsc --noEmit",
+    "lint:fix": "eslint . --fix --ext .js,.ts && tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stern-Ritter/router.git"
+  },
+  "author": "Konstantin Fadeev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stern-Ritter/router/issues"
+  },
+  "homepage": "https://github.com/Stern-Ritter/router#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.1.4",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.2",
+    "jest-environment-jsdom": "^27.4.6",
+    "lint-staged": "^12.0.2",
+    "mini-css-extract-plugin": "^2.4.5",
+    "prettier": "^2.4.1",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md,yml}": "prettier --write"
+  }
+}
